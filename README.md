@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
+# Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple TypeScript application that was developed as part of a job interview assignment. The project is designed to demonstrate basic TypeScript and React skills, with a minimal setup and straightforward deployment process.
 
-Currently, two official plugins are available:
+## Setup and Run Instructions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Development
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. **Clone the repository**:
+```bash
+git clone https://github.com/ugur-eren/react-chat-assignment.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. **Install dependencies**:
+```bash
+yarn install
 ```
+
+3. **Run the development server**:
+```bash
+yarn start
+```
+
+### Deployment
+
+1. **Build the project**:
+```bash
+yarn build
+```
+
+## Explanation of Key Design Decisions and Trade-offs
+
+Given the simplicity of the project, there were no significant design decisions required. The project was built using TypeScript for type safety and maintainability.
+
+### Use of Styled-Components
+
+Styled-components were used to manage component-level styling. This choice was made to take advantage of the following benefits:
+  - Scoped CSS: Ensures that styles are scoped to individual components, preventing style conflicts.
+  - Dynamic Styling: Allows for styling based on component props, making the UI more responsive to state changes.
+  - Maintainability: By collocating styles with components, the codebase becomes easier to maintain and scale.
+
+## List of Third-Party Libraries Used and Justification
+
+- TypeScript: Provides static typing, which helps in catching errors early during development and improves code maintainability.
+- React: A popular library for building user interfaces, chosen for its component-based architecture.
+- Styled-Components: Used for component-level styling, ensuring styles are scoped, dynamic, and easy to maintain.
+
+## Challenges Faced and How They Were Overcome
+
+There were no significant challenges faced during the development of this project, given its simplicity.
