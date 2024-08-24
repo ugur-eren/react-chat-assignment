@@ -1,8 +1,14 @@
+import {useState} from 'react';
+
 import {ButtonPrimary} from '../../components';
 import {Menu, MenuItem} from '../../components/Menu';
+import {useAutoComplete} from '../../hooks';
 import {ChatBubble, Container, Content, Input, InputContainer, MenuContainer} from './styled';
 
 export const Chat: React.FC = () => {
+  const [message, setMessage] = useState('');
+  const completions = useAutoComplete(message);
+
   return (
     <Container>
       <Content>
@@ -32,16 +38,24 @@ export const Chat: React.FC = () => {
       </Content>
 
       <InputContainer>
-        <MenuContainer>
-          <Menu>
-            <MenuItem>Option 1</MenuItem>
-            <MenuItem>Option 2</MenuItem>
-            <MenuItem>Option 3</MenuItem>
-            <MenuItem>Option 4</MenuItem>
-          </Menu>
-        </MenuContainer>
+        {completions.length > 0 && (
+          <MenuContainer>
+            <Menu>
+              {completions.map((match) => (
+                <MenuItem key={match.label} onClick={() => setMessage(match.message)}>
+                  {match.label}
+                </MenuItem>
+              ))}
+            </Menu>
+          </MenuContainer>
+        )}
 
-        <Input placeholder="Enter your message" />
+        <Input
+          placeholder="Enter your message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+
         <ButtonPrimary radius={0}>Send</ButtonPrimary>
       </InputContainer>
     </Container>
