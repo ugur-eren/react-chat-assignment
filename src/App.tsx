@@ -1,14 +1,9 @@
+import {GlobalStyles, ThemeProvider} from './styles';
+
 export const App: React.FC = () => {
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button>count is 0</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-    </>
+    <ThemeProvider>
+      <GlobalStyles />
+    </ThemeProvider>
   );
 };
