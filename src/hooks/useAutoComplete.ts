@@ -1,4 +1,4 @@
-import {SENTENCE_LIST, WORD_LIST} from '../constants/autocomplete';
+import {COMBO_BOX_OPTIONS, SENTENCE_LIST, WORD_LIST} from '../constants/autocomplete';
 
 type Match = {
   message: string;
@@ -8,6 +8,13 @@ type Match = {
 export const useAutoComplete = (msg: string): Match[] => {
   const message = msg?.trim().toLowerCase();
   if (!message) return [];
+
+  if (message.startsWith('/select')) {
+    return COMBO_BOX_OPTIONS.map<Match>((option) => ({
+      message: option,
+      label: option,
+    }));
+  }
 
   // Find words that start with the last word in the message
   const lastWord = message.split(' ').pop() ?? '';

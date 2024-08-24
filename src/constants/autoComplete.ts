@@ -45,3 +45,5 @@ export const SENTENCE_LIST = [
   'Looking forward to your response.',
   'Have a great day!',
 ];
+
+export const COMBO_BOX_OPTIONS = ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'];
