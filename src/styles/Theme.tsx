@@ -6,6 +6,7 @@ export const LightTheme = {
 
   background: '#F0F0F0',
   surface: '#FAFAFA',
+  elevated: '#FFFFFF',
 
   text: '#242424',
 };

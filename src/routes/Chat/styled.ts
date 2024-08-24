@@ -35,3 +35,10 @@ export const ChatBubble = styled.div<{orientation: 'left' | 'right'}>`
   border-radius: 8px;
   align-self: ${({orientation}) => (orientation === 'left' ? 'flex-start' : 'flex-end')};
 `;
+
+export const MenuContainer = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+`;

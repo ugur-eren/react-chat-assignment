@@ -1,5 +1,6 @@
 import {ButtonPrimary} from '../../components';
-import {ChatBubble, Container, Content, Input, InputContainer} from './styled';
+import {Menu, MenuItem} from '../../components/Menu';
+import {ChatBubble, Container, Content, Input, InputContainer, MenuContainer} from './styled';
 
 export const Chat: React.FC = () => {
   return (
@@ -31,6 +32,15 @@ export const Chat: React.FC = () => {
       </Content>
 
       <InputContainer>
+        <MenuContainer>
+          <Menu>
+            <MenuItem>Option 1</MenuItem>
+            <MenuItem>Option 2</MenuItem>
+            <MenuItem>Option 3</MenuItem>
+            <MenuItem>Option 4</MenuItem>
+          </Menu>
+        </MenuContainer>
+
         <Input placeholder="Enter your message" />
         <ButtonPrimary radius={0}>Send</ButtonPrimary>
       </InputContainer>
