@@ -10,4 +10,5 @@ export const ButtonPrimary = styled.button<{block?: boolean; radius?: number}>`
   padding: 12px 36px;
   border: none;
   border-radius: ${({radius}) => radius ?? 6}px;
+  cursor: pointer;
 `;
