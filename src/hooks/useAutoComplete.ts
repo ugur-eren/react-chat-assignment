@@ -1,4 +1,4 @@
-import {COMBO_BOX_OPTIONS, SENTENCE_LIST, WORD_LIST} from '../constants/autocomplete';
+import {COMBO_BOX_OPTIONS, SENTENCE_LIST, WORD_LIST} from '../constants/autoComplete';
 
 type Match = {
   message: string;

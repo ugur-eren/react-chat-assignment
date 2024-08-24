@@ -2,6 +2,8 @@
 
 This project is a simple TypeScript application that was developed as part of a job interview assignment. The project is designed to demonstrate basic TypeScript and React skills, with a minimal setup and straightforward deployment process.
 
+Live Demo: [https://adorable-arithmetic-f71589.netlify.app/](https://adorable-arithmetic-f71589.netlify.app/)
+
 ## Setup and Run Instructions
 
 ### Development
